@@ -216,7 +216,7 @@ namespace SatisfactoryBuildPlanner
                 {
                     recipe.InputItems.Add(row["ItemName"].ToString());
                     recipe.InputIDs.Add(Convert.ToInt32(row["ItemID"]));
-                    recipe.InputQuantity.Add(Convert.ToInt32(row["Quantity"]));
+                    recipe.InputQuantity.Add((float)Convert.ToDouble(row["Quantity"]));
                 }
             }
             Recipe selectedRecipe = recipes[0];
